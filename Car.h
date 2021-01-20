@@ -4,20 +4,9 @@
 #include <fstream>
 using namespace std;
 
-typedef enum LABEL
-{
-	VAZ = 0,
-	KIA,
-	NISSAN,
-	TOYOTA
-}LABEL;
-
-
 class Car
 {
 protected:
-	LABEL label;
-
 	string Color;
 	string EngineType;
 	string EngineVolume;
@@ -34,8 +23,6 @@ public:
 
 	virtual void setFeature() = 0;
 	virtual bool getFeature() = 0;
-	virtual void setLabel() = 0;
-	LABEL getLabel() { return label; }
 
 	void setColor(string& str)        { Color = str; }
 	void setEngineType(string& str)   { EngineType = str; }

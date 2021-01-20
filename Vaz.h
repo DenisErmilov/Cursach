@@ -10,9 +10,7 @@ public:
 	Vaz(const Vaz& object) : Car(object) { RoofRack = object.RoofRack; }
 	~Vaz() {};
 
-	void setLabel() { label = VAZ; }
 	void setFeature() { RoofRack = true; }
-
 	bool getFeature() { return RoofRack; }
 
 	void writeToFile(ofstream& out);

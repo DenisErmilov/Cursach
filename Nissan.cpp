@@ -2,6 +2,7 @@
 
 void Nissan::writeToFile(ofstream& out)
 {
+	out << endl;
 	out << "Car model: " << getModel() << endl;
 	out << "Car color: " << getColor() << endl;
 	out << "Car engine type: " << getEngineType() << endl;
@@ -16,7 +17,6 @@ void Nissan::writeToFile(ofstream& out)
 		out << "YES" << endl;
 	else
 		out << "NO" << endl;
-	cout << endl;
 }
 
 void Nissan::readFromFile(ifstream& in)
@@ -24,6 +24,7 @@ void Nissan::readFromFile(ifstream& in)
 	string str, tmp;
 	int pos;
 
+	in.get();
 	getline(in, str);
 	pos = str.find_first_of(':') + 2;
 	tmp = str.substr(pos);
@@ -83,6 +84,5 @@ void Nissan::readFromFile(ifstream& in)
 	tmp = str.substr(pos);
 	if (tmp.find("YES") != string::npos)
 		setFeature();
-
 	in.get();
 }

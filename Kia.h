@@ -10,9 +10,7 @@ public:
 	Kia(const Kia& object) : Car(object) { HeatedMirrors = object.HeatedMirrors; }
 	~Kia() {}
 
-	void setLabel() { label = KIA; }
 	void setFeature() { HeatedMirrors = true; }
-
 	bool getFeature() { return HeatedMirrors; }
 	
 	void writeToFile(ofstream& out);

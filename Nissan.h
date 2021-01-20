@@ -10,9 +10,7 @@ public:
 	Nissan(const Nissan& object) : Car(object) { HeatedSeats = object.HeatedSeats; }
 	~Nissan() {}
 
-	void setLabel() { label = NISSAN; }
 	void setFeature() { HeatedSeats = true; }
-
 	bool getFeature() { return HeatedSeats; }
 
 	void writeToFile(ofstream& out);

@@ -21,7 +21,6 @@ int main()
 	Car **nissan = nullptr;
 	Car **toyota = nullptr;
 
-	string path;
 	ifstream infile;
 	ofstream outfile;
 
@@ -64,11 +63,17 @@ int main()
 			builder.setYearOfIssue();
 			builder.setRoofRack();
 
-			try { vaz = resize(vaz, &size1); }
-			catch (const char* errorMessage) { cout << "Error: " << errorMessage << endl; }
-			vaz[size1 - 1] = builder.getProduct();
-			
-			cout << "VAZ was added, press any button to continue" << endl;
+			try 
+			{ 
+				vaz = resize(vaz, &size1); 
+				vaz[size1 - 1] = builder.getProduct(); 
+				cout << "VAZ was added, press any button to continue" << endl;
+			}
+			catch (const char* errorMessage) 
+			{ 
+				cout << "Error: " << errorMessage << endl; 
+				cout << "press any button to continue" << endl;
+			}
 			break;
 		case 2:
 			builder.createKia();
@@ -83,11 +88,17 @@ int main()
 			builder.setYearOfIssue();
 			builder.setHeatedMirrors();
 
-			try { vaz = resize(kia, &size2); }
-			catch (const char* errorMessage) { cout << "Error: " << errorMessage << endl; }
-			kia[size2 - 1] = builder.getProduct();
-			
-			cout << "KIA was added, press any button to continue" << endl;
+			try 
+			{ 
+				vaz = resize(kia, &size2); 
+				kia[size2 - 1] = builder.getProduct();
+				cout << "KIA was added, press any button to continue" << endl;
+			}
+			catch (const char* errorMessage)
+			{
+				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
+			}
 			break;
 		case 3:
 			builder.createNissan();
@@ -102,11 +113,17 @@ int main()
 			builder.setYearOfIssue();
 			builder.setHeatedSeats();
 
-			try { vaz = resize(nissan, &size3); }
-			catch (const char* errorMessage) { cout << "Error: " << errorMessage << endl; }
-			nissan[size3 - 1] = builder.getProduct();
-
-			cout << "NISSAN was added, press any button to continue" << endl;
+			try 
+			{ 
+				vaz = resize(nissan, &size3); 
+				nissan[size3 - 1] = builder.getProduct();
+				cout << "NISSAN was added, press any button to continue" << endl;
+			}
+			catch (const char* errorMessage)
+			{
+				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
+			}
 			break;
 		case 4:
 			builder.createToyota();
@@ -121,19 +138,26 @@ int main()
 			builder.setYearOfIssue();
 			builder.setAutoTransmission();
 
-			try { vaz = resize(toyota, &size4); }
-			catch(const char* errorMessage){ cout << "Error: " << errorMessage << endl; }
-			toyota[size4 - 1] = builder.getProduct();
-
-			cout << "TOYOTA was added, press any button to continue" << endl;
+			try 
+			{ 
+				vaz = resize(toyota, &size4); 
+				toyota[size4 - 1] = builder.getProduct();
+				cout << "TOYOTA was added, press any button to continue" << endl;
+			}
+			catch (const char* errorMessage)
+			{
+				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
+			}
 			break;
 		case 5:
-			cout << "Enter name of file with VAZ" << endl << "-> ";
-			getline(cin, path);
-			infile.open(path, ios_base::in);
-			
 			try
 			{
+				string path;
+				cout << "Enter name of file with VAZ" << endl << "-> ";
+				getline(cin, path);
+				infile.open(path, ios_base::in);
+
 				if (!infile.is_open())
 					throw "Can't open file with VAZ";
 
@@ -148,21 +172,22 @@ int main()
 				}
 
 				infile.close();
+				cout << "VAZ was loaded from file, press any button to continue" << endl;
 			}
 			catch (const char* errorMessage)
 			{
 				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
 			}
-
-			cout << "VAZ was loaded from file, press any button to continue" << endl;
 			break;
 		case 6:
-			cout << "Enter name of file with KIA" << endl << "-> ";
-			getline(cin, path);
-			infile.open(path, ios_base::in);
-
 			try
 			{
+				string path;
+				cout << "Enter name of file with KIA" << endl << "-> ";
+				getline(cin, path);
+				infile.open(path, ios_base::in);
+
 				if (!infile.is_open())
 					throw "Can't open file with KIA";
 
@@ -177,21 +202,22 @@ int main()
 				}
 
 				infile.close();
+				cout << "KIA was loaded from file, press any button to continue" << endl;
 			}
 			catch (const char* errorMessage)
 			{
 				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
 			}
-
-			cout << "KIA was loaded from file, press any button to continue" << endl;
 			break;
 		case 7:
-			cout << "Enter name of file with NISSAN" << endl << "-> ";
-			getline(cin, path);
-			infile.open(path, ios_base::in);
-
 			try
 			{
+				string path;
+				cout << "Enter name of file with NISSAN" << endl << "-> ";
+				getline(cin, path);
+				infile.open(path, ios_base::in);
+
 				if (!infile.is_open())
 					throw "Can't open file with NISSAN";
 
@@ -206,21 +232,22 @@ int main()
 				}
 
 				infile.close();
+				cout << "NISSAN was loaded from file, press any button to continue" << endl;
 			}
 			catch (const char* errorMessage)
 			{
 				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
 			}
-
-			cout << "NISSAN was loaded from file, press any button to continue" << endl;
 			break;
 		case 8:
-			cout << "Enter name of file with TOYOTA" << endl << "-> ";
-			getline(cin, path);
-			infile.open(path, ios_base::in);
-
 			try
 			{
+				string path;
+				cout << "Enter name of file with TOYOTA" << endl << "-> ";
+				getline(cin, path);
+				infile.open(path, ios_base::in);
+
 				if (!infile.is_open())
 					throw "Can't open file with TOYOTA";
 
@@ -235,94 +262,115 @@ int main()
 				}
 
 				infile.close();
+				cout << "TOYOTA was loaded from file, press any button to continue" << endl;
 			}
 			catch (const char* errorMessage)
 			{
 				cout << "Error: " << errorMessage << endl;
+				cout << "press any button to continue" << endl;
 			}
-
-			cout << "TOYOTA was loaded from file, press any button to continue" << endl;
 			break;
 		case 9:
-			cout << "Enter name of file to save VAZ" << endl << "-> ";
-			getline(cin, path);
-			outfile.open(path, ios_base::out);
-
-			try
+			if (size1 > 0)
 			{
-				if (!outfile.is_open())
-					throw "Can't open file to save VAZ";
+				string path;
+				cout << "Enter name of file to save VAZ" << endl << "-> ";
+				getline(cin, path);
+				outfile.open(path, ios_base::out);
+				cout << endl;
 
-				for (int i = 0; i < size1; i++)
-					vaz[i]->writeToFile(outfile);
+				try
+				{
+					if (!outfile.is_open())
+						throw "Can't open file to save VAZ";
 
-				outfile.close();
+					for (int i = 0; i < size1; i++)
+						vaz[i]->writeToFile(outfile);
+
+					outfile.close();
+				}
+				catch (const char *errorMessage)
+				{
+					cout << "Error: " << errorMessage << endl;
+				}
 			}
-			catch(const char *errorMessage) 
-			{ 
-				cout << "Error: " << errorMessage << endl; 
-			}
-
-			cout << "Enter name of file to save KIA" << endl << "-> ";
-			getline(cin, path);
-			outfile.open(path, ios_base::out);
-
-			try
+			if (size2 > 0)
 			{
-				if (!outfile.is_open())
-					throw "Can't open file to save KIA";
+				string path;
+				cout << "Enter name of file to save KIA" << endl << "-> ";
+				getline(cin, path);
+				outfile.open(path, ios_base::out);
+				cout << endl;
 
-				for (int i = 0; i < size2; i++)
-					kia[i]->writeToFile(outfile);
+				try
+				{
+					if (!outfile.is_open())
+						throw "Can't open file to save KIA";
 
-				outfile.close();
+					for (int i = 0; i < size2; i++)
+						kia[i]->writeToFile(outfile);
+
+					outfile.close();
+				}
+				catch (const char *errorMessage)
+				{
+					cout << "Error: " << errorMessage << endl;
+				}
 			}
-			catch (const char *errorMessage)
+			if (size3 > 0)
 			{
-				cout << "Error: " << errorMessage << endl;
+				string path;
+				cout << "Enter name of file to save NISSAN" << endl << "-> ";
+				getline(cin, path);
+				outfile.open(path, ios_base::out);
+				cout << endl;
+
+				try
+				{
+					if (!outfile.is_open())
+						throw "Can't open file to save NISSAN";
+
+					for (int i = 0; i < size3; i++)
+						nissan[i]->writeToFile(outfile);
+
+					outfile.close();
+				}
+				catch (const char *errorMessage)
+				{
+					cout << "Error: " << errorMessage << endl;
+				}
 			}
-
-			cout << "Enter name of file to save NISSAN" << endl << "-> ";
-			getline(cin, path);
-			outfile.open(path, ios_base::out);
-
-			try
+			if (size4 > 0)
 			{
-				if (!outfile.is_open())
-					throw "Can't open file to save NISSAN";
+				string path;
+				cout << "Enter name of file to save TOYOTA" << endl << "-> ";
+				getline(cin, path);
+				outfile.open(path, ios_base::out);
+				cout << endl;
 
-				for (int i = 0; i < size3; i++)
-					nissan[i]->writeToFile(outfile);
+				try
+				{
+					if (!outfile.is_open())
+						throw "Can't open file to save TOYOTA";
 
-				outfile.close();
-			}
-			catch (const char *errorMessage)
-			{
-				cout << "Error: " << errorMessage << endl;
-			}
+					for (int i = 0; i < size4; i++)
+						toyota[i]->writeToFile(outfile);
 
-			cout << "Enter name of file to save TOYOTA" << endl << "-> ";
-			getline(cin, path);
-			outfile.open(path, ios_base::out);
-
-			try
-			{
-				if (!outfile.is_open())
-					throw "Can't open file to save TOYOTA";
-
-				for (int i = 0; i < size4; i++)
-					toyota[i]->writeToFile(outfile);
-
-				outfile.close();
-			}
-			catch (const char *errorMessage)
-			{
-				cout << "Error: " << errorMessage << endl;
+					outfile.close();
+				}
+				catch (const char *errorMessage)
+				{
+					cout << "Error: " << errorMessage << endl;
+				}
 			}
 
 			cout << "All cars was saved to their files, press any button to continue" << endl;
 			break;
+		default:
+			cout << "Entered wrong menu item, press any button to continue" << endl;
+			break;
 		}
+		
 
 		cin.get();
 		system("cls");
@@ -366,7 +414,7 @@ Car** resize(Car **car, int *size)
 	for (int i = 0; i < *size; i++)
 	{
 		tmp[i] = car[i];
-		delete car[i];
+		car[i] = nullptr;
 	}
 	delete[] car;
 	*size = *size + 1;

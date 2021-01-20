@@ -13,10 +13,10 @@ public:
 	CarBuilder() {}
 	~CarBuilder() { if (Product != nullptr) delete Product; }
 
-	void createVaz()    { if (Product != nullptr) delete Product; Product = new Vaz();    Product->setLabel(); }
-	void createKia()    { if (Product != nullptr) delete Product; Product = new Kia();    Product->setLabel(); }
-	void createNissan() { if (Product != nullptr) delete Product; Product = new Nissan(); Product->setLabel(); }
-	void createToyota() { if (Product != nullptr) delete Product; Product = new Toyota(); Product->setLabel(); }
+	void createVaz()    { if (Product != nullptr) delete Product; Product = new Vaz(); }
+	void createKia()    { if (Product != nullptr) delete Product; Product = new Kia(); }
+	void createNissan() { if (Product != nullptr) delete Product; Product = new Nissan(); }
+	void createToyota() { if (Product != nullptr) delete Product; Product = new Toyota(); }
 
 	void setColor();
 	void setEngineType();

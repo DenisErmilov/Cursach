@@ -10,9 +10,7 @@ public:
 	Toyota(const Toyota& object) : Car(object) { AutoTransmission = object.AutoTransmission; }
 	~Toyota() {}
 
-	void setLabel() { label = TOYOTA; }
 	void setFeature() { AutoTransmission = true; }
-
 	bool getFeature() { return AutoTransmission; }
 
 	void writeToFile(ofstream& out);
