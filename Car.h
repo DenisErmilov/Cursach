@@ -37,13 +37,26 @@ public:
 	virtual void setLabel() = 0;
 	LABEL getLabel() { return label; }
 
-	void setColor()        { getline(cin, Color); }
-	void setEngineType()   { getline(cin, EngineType); }
-	void setEngineVolume() { getline(cin, EngineVolume); }
-	void setDimensions()   { getline(cin, Dimensions); }
-	void setYearOfIssue()  { getline(cin, YearOfIssue); }
-	void setDoorsNumber()  { getline(cin, DoorsNumber); }
-	void setModel()        { getline(cin, Model); }
-	void setTireBrand()    { getline(cin, TireBrand); }
-	void setTrunkVolume()  { getline(cin, TrunkVolume); }
+	void setColor(string& str)        { Color = str; }
+	void setEngineType(string& str)   { EngineType = str; }
+	void setEngineVolume(string& str) { EngineVolume = str; }
+	void setDimensions(string& str)   { Dimensions = str; }
+	void setYearOfIssue(string& str)  { YearOfIssue = str; }
+	void setDoorsNumber(string& str)  { DoorsNumber = str; }
+	void setModel(string& str)        { Model = str; }
+	void setTireBrand(string& str)    { TireBrand = str; }
+	void setTrunkVolume(string& str)  { TrunkVolume = str; }
+
+	string& getColor()        { return Color; }
+	string& getEngineType()   { return EngineType; }
+	string& getEngineVolume() { return EngineVolume; }
+	string& getDimensions()	  { return Dimensions; }
+	string& getYearOfIssue()  { return YearOfIssue; }
+	string& getDoorsNumber()  { return DoorsNumber; }
+	string& getModel()        { return Model; }
+	string& getTireBrand()    { return TireBrand; }
+	string& getTrunkVolume()  { return TrunkVolume; }
+
+	virtual void writeToFile(ofstream& out) = 0;
+	virtual void readFromFile(ifstream& in) = 0;
 };

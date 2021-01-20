@@ -3,54 +3,72 @@
 void CarBuilder::setColor()
 {
 	cout << "Enter car color:           ";
-	Product->setColor();
+	string str;
+	getline(cin, str);
+	Product->setColor(str);
 }
 void CarBuilder::setEngineType()
 {
 	cout << "Enter engine type:         ";
-	Product->setEngineType();
+	string str;
+	getline(cin, str);
+	Product->setEngineType(str);
 }
 
 void CarBuilder::setEngineVolume()
 {
 	cout << "Enter engine volume:       ";
-	Product->setEngineVolume();
+	string str;
+	getline(cin, str);
+	Product->setEngineVolume(str);
 }
 
 void CarBuilder::setDimensions()
 {
 	cout << "Enter vehicle dimensions:  ";
-	Product->setDimensions();
+	string str;
+	getline(cin, str);
+	Product->setDimensions(str);
 }
 
 void CarBuilder::setYearOfIssue()
 {
 	cout << "Enter the year of issue:   ";
-	Product->setYearOfIssue();
+	string str;
+	getline(cin, str);
+	Product->setYearOfIssue(str);
 }
 
 void CarBuilder::setDoorsNumber()
 {
 	cout << "Enter the number of doors: ";
-	Product->setDoorsNumber();
+	string str;
+	getline(cin, str);
+	Product->setDoorsNumber(str);
 }
 
 void CarBuilder::setModel()
 {
 	cout << "Enter car model:           ";
-	Product->setModel();
+	string str;
+	getline(cin, str);
+	Product->setModel(str);
 }
 
 void CarBuilder::setTireBrand()
 {
 	cout << "Enter your car tire brand: ";
-	Product->setTireBrand();
+	string str;
+	getline(cin, str);
+	Product->setTireBrand(str);
 }
 
 void CarBuilder::setTrunkVolume()
 {
 	cout << "Enter trunk volume:        ";
-	Product->setTrunkVolume();
+	string str;
+	getline(cin, str);
+	Product->setTrunkVolume(str);
 }
 
 void CarBuilder::setRoofRack()

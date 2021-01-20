@@ -15,6 +15,6 @@ public:
 
 	bool getFeature() { return HeatedSeats; }
 
-	friend ofstream& operator<< (ofstream& in, Car& car);
-	friend ifstream& operator>> (ifstream& in, Car& car);
+	void writeToFile(ofstream& out);
+	void readFromFile(ifstream& in);
 };

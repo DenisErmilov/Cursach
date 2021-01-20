@@ -3,8 +3,6 @@
 class AbstractCarBuilder
 {
 public:
-	virtual void create() = 0;
-
 	virtual void setColor() = 0;
 	virtual void setEngineType() = 0;
 	virtual void setEngineVolume() = 0;

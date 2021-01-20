@@ -14,7 +14,7 @@ public:
 	void setFeature() { HeatedMirrors = true; }
 
 	bool getFeature() { return HeatedMirrors; }
-
-	friend ofstream& operator<< (ofstream& in, Car& car);
-	friend ifstream& operator>> (ifstream& in, Car& car);
+	
+	void writeToFile(ofstream& out);
+	void readFromFile(ifstream& in);
 };
