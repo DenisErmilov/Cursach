@@ -90,7 +90,7 @@ int main()
 
 			try 
 			{ 
-				vaz = resize(kia, &size2); 
+				kia = resize(kia, &size2); 
 				kia[size2 - 1] = builder.getProduct();
 				cout << "KIA was added, press any button to continue" << endl;
 			}
@@ -115,7 +115,7 @@ int main()
 
 			try 
 			{ 
-				vaz = resize(nissan, &size3); 
+				nissan = resize(nissan, &size3); 
 				nissan[size3 - 1] = builder.getProduct();
 				cout << "NISSAN was added, press any button to continue" << endl;
 			}
@@ -140,7 +140,7 @@ int main()
 
 			try 
 			{ 
-				vaz = resize(toyota, &size4); 
+				toyota = resize(toyota, &size4); 
 				toyota[size4 - 1] = builder.getProduct();
 				cout << "TOYOTA was added, press any button to continue" << endl;
 			}
@@ -196,7 +196,7 @@ int main()
 					Car *tmp = new Kia();
 					tmp->readFromFile(infile);
 
-					vaz = resize(kia, &size2);
+					kia = resize(kia, &size2);
 					kia[size2 - 1] = tmp;
 					tmp = nullptr;
 				}
@@ -226,7 +226,7 @@ int main()
 					Car *tmp = new Nissan();
 					tmp->readFromFile(infile);
 
-					vaz = resize(nissan, &size3);
+					nissan = resize(nissan, &size3);
 					nissan[size3 - 1] = tmp;
 					tmp = nullptr;
 				}
@@ -256,7 +256,7 @@ int main()
 					Car *tmp = new Toyota();
 					tmp->readFromFile(infile);
 
-					vaz = resize(toyota, &size4);
+					toyota = resize(toyota, &size4);
 					toyota[size4 - 1] = tmp;
 					tmp = nullptr;
 				}
